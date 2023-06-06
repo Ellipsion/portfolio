@@ -6,9 +6,9 @@ import WidgetButton from './buttons/WidgetButton';
 import { FaCode } from "react-icons/fa"
 const Skills = () => {
     return (
-        <div className='flex flex-col gap-5'>
-            <div className='flex justify-between items-center'>
-                <p className='text-sm font-medium'>What I do</p>
+        <div className='flex flex-col gap-5 '>
+            <div className='flex justify-between items-start mt-2'>
+                <p className='text-normal font-medium'>What I do</p>
                 <WidgetButton Icon={FaCode} />
             </div>
 

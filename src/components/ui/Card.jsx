@@ -5,7 +5,7 @@ import { BsCodeSlash } from "react-icons/bs"
 
 const Card = ({ title, desc }) => {
     return (
-        <div className='w-[85%] sm:w-[48%] bg-white shadow-neumorphic p-2 rounded-lg flex flex-col gap-5'>
+        <div className='w-[90%] sm:w-[48%] bg-white shadow-neumorphic p-2 rounded-lg flex flex-col gap-5'>
             <div className='w-full'>
                 <p className='text-[10px] font-bold border w-fit px-2 py-1 rounded-lg'>Project</p>
 

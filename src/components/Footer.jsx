@@ -6,7 +6,7 @@ import { BsDot } from "react-icons/bs"
 
 const Footer = () => {
     return (
-        <div>
+        <div className='mx-3'>
             <div className='mt-10 mb-5 font-bold text-[40px] sm:text-[55px] leading-10 sm:leading-[68px] tracking-[-3px] sm:tracking-[-4px]'>
                 <p >Let's Collaborate!</p>
             </div>
