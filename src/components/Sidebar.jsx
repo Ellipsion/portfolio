@@ -17,9 +17,12 @@ const Sidebar = () => {
                 ${showSideBar ? "flex" : "hidden"}
             `}>
                 <div onClick={() => setShowSidebar(false)} className='shadow-neumorphic border bg-white w-fit rounded-full p-1 flex flex-col gap-3'>
-                    <MenuButton Icon={LuQrCode} />
-
-                    <MenuButton Icon={SiPluscodes} />
+                    <MenuButton Icon={LuQrCode} name={"Home"} link={"/"} />
+                    <MenuButton Icon={SiPluscodes} name={"Skills"} link={"/skills"} />
+                    <MenuButton Icon={SiPluscodes} name={"Projects"} link={"/projects"} />
+                    <MenuButton Icon={SiPluscodes} name={"Services"} link={"/#services"} />
+                    <MenuButton Icon={SiPluscodes} name={"Resume"} link={"/resume"} />
+                    <MenuButton Icon={SiPluscodes} name={"Contact"} link={"/contact"} />
                 </div>
             </div>
             <button onClick={() => setShowSidebar(true)} className='bg-black md:hidden text-gray-100 z-10 fixed bottom-10 right-8 w-[50px] h-[50px] cursor-pointer p-4 flex items-center justify-center rounded-full font-normal text-sm shadow-neumorphic'>

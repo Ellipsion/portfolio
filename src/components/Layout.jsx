@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Layout = ({ children }) => {
+    const location = useLocation()
+    const myRef = useRef()
+    useEffect(() => {
+        if (location.hash === '') {
+            myRef?.current?.scrollTo({ top: 0, behavior: "smooth" })
+        }
+        console.log(location)
+    }, [myRef, location])
+
     return (
-        <div className='w-screen h-screen overflow-x-hidden'>
+        <div ref={myRef} className='w-screen h-screen overflow-x-hidden'>
             {children}
         </div>
     );

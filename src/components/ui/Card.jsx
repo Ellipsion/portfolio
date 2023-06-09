@@ -1,7 +1,5 @@
 import React from 'react';
-import SpringButton from '../buttons/SpringButton';
 
-import { BsCodeSlash } from "react-icons/bs"
 
 const Card = ({ title, desc }) => {
     return (

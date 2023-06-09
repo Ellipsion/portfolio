@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import SpringButton from '../components/buttons/SpringButton';
 import Skills from "../components/Skills"
 import Divider from '../components/ui/Divider';
@@ -7,7 +7,21 @@ import Footer from '../components/Footer';
 import { HiOutlineMail } from "react-icons/hi"
 import { AiFillGithub } from "react-icons/ai"
 import { FaLinkedinIn } from "react-icons/fa"
+
+import { useLocation } from 'react-router-dom';
+
 const Home = () => {
+    const location = useLocation()
+    const servicesAnchorRef = useRef(null)
+    useEffect(() => {
+        if (location?.hash.includes("#services")) {
+            servicesAnchorRef?.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "start", inline: "nearest"
+            });
+        }
+    }, [servicesAnchorRef, location.hash])
+
     return (
         <div className=' mx-3 h-fit flex flex-wrap flex-col gap-8 sm:gap-5'>
             <div className='flex items-center gap-3'>
@@ -28,7 +42,7 @@ const Home = () => {
                 <p className='text-gray-500  text-sm z-10'>My name is Johnny Kyorov and I am a UI Designer from Bulgaria with a passion for creating exceptional SaaS, Design Systems & NoCode Development.</p>
 
             </div>
-            <div className='px-3 sm:px-0'>
+            <div ref={servicesAnchorRef} className='px-3 sm:px-0'>
                 <Divider />
                 <Skills />
             </div>
