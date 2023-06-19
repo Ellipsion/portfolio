@@ -1,9 +1,11 @@
 import React from 'react';
 import Tooltip from '../tooltip';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
+
 
 const MenuButton = ({ Icon, link, name }) => {
+
     return (
         <Tooltip name={name} >
             <NavLink to={link} end
