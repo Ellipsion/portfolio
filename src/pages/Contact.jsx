@@ -2,6 +2,7 @@ import React from 'react'
 import Divider from 'components/ui/Divider';
 import ContactActions from 'components/ContactActions';
 
+import { BsDot } from "react-icons/bs"
 
 function Contact() {
     return (
@@ -28,6 +29,11 @@ function Contact() {
                     <textarea className='bg-stone-200/60 px-4 py-3 rounded-lg text-black placeholder:text-neutral-500 outline-none w-full' placeholder='Message' rows="5"></textarea>
                     <button className='bg-black hover:bg-stone-800 text-white font-bold rounded-lg p-4'>Send</button>
                 </div>
+            </div>
+            <div className='flex justify-start mb-10 mt-[70px] items-center text-sm font-medium gap-5'>
+                <p className='text-gray-500'> &#169; 2023 Ellipsion</p>
+                <p><BsDot /></p>
+                <p>Made with React</p>
             </div>
         </div>
     )
