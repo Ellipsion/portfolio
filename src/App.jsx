@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // layout
 import IndexLayout from "./layouts/IndexLayout"
@@ -6,6 +6,10 @@ import IndexLayout from "./layouts/IndexLayout"
 // pages
 import Home from "./pages/Home"
 import Skills from "./pages/Skills"
+import Projects from "./pages/Projects"
+import Resume from "pages/Resume";
+import Contact from "pages/Contact";
+import ProjectDetail from "pages/ProjectDetail";
 
 const router = createBrowserRouter([{
   path: "/",
@@ -21,16 +25,21 @@ const router = createBrowserRouter([{
     },
     {
       path: "projects",
-      element: <>projects</>,
+      element: <Projects />,
+    },
+    {
+      path: "project/:slug",
+      element: <ProjectDetail />
     },
     {
       path: "resume",
-      element: <>resume</>,
+      element: <Resume />,
     },
     {
       path: "contact",
-      element: <>contact</>,
+      element: <Contact />,
     },
+
   ]
 }])
 

@@ -1,0 +1,27 @@
+{
+  "projects": [
+    {
+      "title": "Jewelry E-commerce store",
+      "slug": "",
+      "description": "Elegant and blazing fast online store for a jewelry business.",
+      "imageUrl": "/images/ritsika-screenshot.png",
+      "techStack": ["nextjs", "reactjs", "django", "apollo-gql", "postgres"],
+      "type": "project",
+      "deployment": {
+        "status": true,
+        "link": "https://jwelery-store-a4by.vercel.app/",
+        "message": "live"
+      }
+    },
+    {
+      "title": "Data Wrangling and virtualization with Pandas",
+      "description": "Finance data cleaning and processing for ML analysis",
+      "imageUrl": "/images/data-wrangling.avif",
+      "techStack": ["python", "pandas"],
+      "type": "freelance",
+      "deployment": {
+        "status": false
+      }
+    }
+  ]
+}

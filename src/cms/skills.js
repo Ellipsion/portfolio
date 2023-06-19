@@ -1,6 +1,13 @@
 import { SiPostgresql } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
-import { FaPython, FaNodeJs, FaBootstrap, FaReact } from "react-icons/fa";
+import {
+  FaPython,
+  FaNodeJs,
+  FaBootstrap,
+  FaReact,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa";
 import {
   SiMongodb,
   SiDjango,
@@ -46,12 +53,13 @@ export const skillsData = {
       level: 80,
     },
     {
-      name: "MongoDB",
-      description: "NoSQL database",
-      icons: [SiMongodb],
-      iconStyle: "text-green-700 bg-gray-100",
+      name: "React.js",
+      description: "Js frontend framework",
+      icons: [FaReact],
+      iconStyle: "text-white bg-blue-500",
       level: 60,
     },
+
     {
       name: "Express.js",
       description: "NodeJs web framework",
@@ -60,17 +68,17 @@ export const skillsData = {
       level: 60,
     },
     {
-      name: "React.js",
-      description: "Js frontend framework",
-      icons: [FaReact],
-      iconStyle: "text-white bg-blue-500",
-      level: 60,
-    },
-    {
       name: "Node.js",
       description: "Js runtime",
       icons: [FaNodeJs],
       iconStyle: "text-black bg-green-500",
+      level: 60,
+    },
+    {
+      name: "MongoDB",
+      description: "NoSQL database",
+      icons: [SiMongodb],
+      iconStyle: "text-green-700 bg-gray-100",
       level: 60,
     },
     {
@@ -99,7 +107,7 @@ export const skillsData = {
       name: "Tailwind CSS",
       description: "CSS Framework",
       icons: [SiTailwindcss],
-      iconStyle: "text-blue-500",
+      iconStyle: "text-sky-500 bg-white",
       level: 60, //0-100
     },
     {
@@ -121,8 +129,7 @@ export const skillsData = {
       name: "GraphQL",
       description: "API",
       icons: [SiGraphql, SiApollographql],
-      iconColor: "text-gray-100",
-      iconBg: "bg-gray-100",
+      iconStyle: "text-fuchsia-500",
       level: 60, //0-100
     },
     {
@@ -130,7 +137,13 @@ export const skillsData = {
       description: "API",
       icons: [LuWebhook],
       iconColor: "text-gray-100",
-      iconBg: "bg-gray-100",
+      level: 60, //0-100
+    },
+    {
+      name: "Git and Github",
+      description: "Version Control",
+      icons: [FaGitAlt, FaGithub],
+      iconColor: "text-gray-100",
       level: 60, //0-100
     },
     {
@@ -144,24 +157,21 @@ export const skillsData = {
       name: "CSS",
       description: "Stylesheet for web",
       icons: [BiCodeCurly],
-      iconColor: "text-gray-100",
-      iconBg: "bg-gray-100",
+      iconStyle: "text-sky-600",
       level: 60, //0-100
     },
     {
       name: "Pandas",
       description: "Python Framework",
       icons: [SiPandas],
-      iconColor: "text-gray-100",
-      iconBg: "bg-gray-100",
+      iconStyle: "text-pink-500 ",
       level: 60, //0-100
     },
     {
       name: "Web Scraping",
       description: "Python Framework",
       icons: [GrDocumentStore],
-      iconColor: "text-gray-100",
-      iconBg: "bg-gray-100",
+      iconStyle: "text-red-500",
       level: 60, //0-100
     },
     {
@@ -176,8 +186,7 @@ export const skillsData = {
       name: "Selenium",
       description: "Python Framework",
       icons: [SiSelenium],
-      iconColor: "text-gray-100",
-      iconBg: "bg-gray-100",
+      iconStyle: "text-green-600",
       level: 60, //0-100
     },
   ],

@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "title": "Web Apps",
+      "description": "Full stack web apps (Django, MERN)",
+      "imageUrl": "images/services/web-apps.webp"
+    },
+    {
+      "title": "E-commerce Store",
+      "description": "Your customized store",
+      "imageUrl": "images/services/e-commerce-store.webp"
+    },
+    {
+      "title": "UI Developemnt",
+      "description": "UI with React and other frontend technologies",
+      "imageUrl": "images/services/ui-dev.webp"
+    },
+    {
+      "title": "Portfolio Websites",
+      "description": "Personal portfolio websites and commission pages",
+      "imageUrl": "images/services/portfolio.webp"
+    },
+    {
+      "title": "Static Websites",
+      "description": "Static websites with JS HTML CSS (Vanila or Bootstrap)",
+      "imageUrl": "images/services/commission-pages.webp"
+    },
+    {
+      "title": "backend Developemnt",
+      "description": "Django, Node, Firebase",
+      "imageUrl": "images/services/web-apps.webp"
+    },
+
+    {
+      "title": "CRM and Admin Dashboards",
+      "description": "Analytics, resource management dashboards",
+      "imageUrl": "images/services/dashboard-development.webp"
+    },
+
+    {
+      "title": "Web Scraping",
+      "description": "Python scrapers and data crawlers",
+      "imageUrl": "images/services/web-scraping.webp"
+    }
+  ]
+}
