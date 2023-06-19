@@ -13,11 +13,11 @@ const ServicesSection = () => {
         <div className='flex flex-col gap-5 '>
             <div className='flex justify-between items-start mt-2'>
                 <p className='text-normal font-medium'>What I do</p>
-                <NavLink to="/skills">
-                    <Tooltip name={"Skills"}>
-                        <WidgetButton Icon={LuCode2} />
-                    </Tooltip>
-                </NavLink>
+
+                <Tooltip name={"Skills"}>
+                    <WidgetButton Icon={LuCode2} link={"/skills"} />
+                </Tooltip>
+
             </div>
 
             <div className='mt-5 flex flex-wrap gap-3 justify-center sm:justify-normal'>

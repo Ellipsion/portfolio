@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { NavLink } from 'react-router-dom';
 const WidgetButton = ({ Icon, link }) => {
     return (
 
-        <a href={link} className='bg-white w-[50px] cursor-pointer p-4 flex items-center justify-center rounded-full font-normal text-lg shadow-neumorphic'>
+        <NavLink to={link} className='bg-white w-[50px] cursor-pointer p-4 flex items-center justify-center rounded-full font-normal text-lg shadow-neumorphic'>
             <Icon className="w-5" />
-        </a>
+        </NavLink>
 
     );
 }
