@@ -9,7 +9,7 @@ import { LuCode2 } from "react-icons/lu"
 const Sidebar = () => {
 
     return (
-        <div className='fixed w-screen bottom-0 bg-gray-100/30 md:bg-transparent backdrop-blur py-3 shadow-neumorphic md:shadow-none h-auto md:w-fit md:h-screen  md:left-8 z-[999]'>
+        <div className='fixed w-screen bottom-0 bg-gray-100/30 md:bg-transparent backdrop-blur py-3 md:shadow-none h-auto md:w-fit md:h-screen  md:left-8 z-[999]'>
             <nav className={`wrapper flex flex-wrap w-full md:flex-col gap-1 px-1 md:px-0 md:justify-center md:gap-5 md:h-full`}>
                 <div className='shadow-neumorphic border bg-white w-fit rounded-full p-1 flex flex-row md:flex-col  gap-2 md:gap-3'>
                     <MenuButton Icon={CiGrid42} name={"Home"} link={"/"} />
