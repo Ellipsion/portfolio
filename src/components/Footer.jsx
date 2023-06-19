@@ -13,7 +13,7 @@ const Footer = () => {
             <div className='flex mb-10 flex-col gap-4 sm:justify-start sm:flex-row w-full my-3'>
                 <ZoomButton text={"Contact"} Icon={FiArrowUpRight} link={"/contact"} />
             </div>
-            <div className='flex justify-start mb-10 mt-[70px] items-center text-sm font-medium gap-5'>
+            <div className='flex justify-start mb-[120px] md:mb-10 mt-[70px] items-center text-sm font-medium gap-5'>
                 <p className='text-gray-500'> &#169; 2023 Ellipsion</p>
                 <p><BsDot /></p>
                 <p>Made with React</p>

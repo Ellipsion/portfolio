@@ -30,7 +30,7 @@ function Contact() {
                     <button className='bg-black hover:bg-stone-800 text-white font-bold rounded-lg p-4'>Send</button>
                 </div>
             </div>
-            <div className='flex justify-start mb-10 mt-[70px] items-center text-sm font-medium gap-5'>
+            <div className='flex justify-start mb-[120px] md:mb-10 mt-[70px] items-center text-sm font-medium gap-5'>
                 <p className='text-gray-500'> &#169; 2023 Ellipsion</p>
                 <p><BsDot /></p>
                 <p>Made with React</p>
