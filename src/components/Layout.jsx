@@ -8,7 +8,6 @@ const Layout = ({ children }) => {
         if (location.hash === '') {
             myRef?.current?.scrollTo({ top: 0, behavior: "smooth" })
         }
-        console.log(location)
     }, [myRef, location])
 
     return (

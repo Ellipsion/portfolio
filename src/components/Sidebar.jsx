@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MenuButton from './buttons/MenuButton';
-import { SiPluscodes, SiNounproject } from "react-icons/si";
-import { AiOutlineMenu } from 'react-icons/ai';
-import { CiMail, CiGrid42, CiViewTimeline, CiSquareMore, CiCoffeeCup, CiPaperplane, CiViewBoard } from "react-icons/ci"
-import { IoMailOutline, IoDocumentTextOutline, IoBagCheckOutline } from "react-icons/io5"
+import { SiNounproject } from "react-icons/si";
+import { CiMail, CiGrid42, CiViewTimeline, CiPaperplane } from "react-icons/ci"
 import { LuCode2 } from "react-icons/lu"
 
 const Sidebar = () => {

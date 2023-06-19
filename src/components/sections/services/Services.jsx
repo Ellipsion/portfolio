@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import Card from './Card';
 import WidgetButton from 'components/buttons/WidgetButton';
