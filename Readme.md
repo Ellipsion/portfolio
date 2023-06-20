@@ -12,6 +12,8 @@
 
 * [X] Projects page
 * [X] Add message to project live link
+* [ ] Add blur support for elements on mobile
+* [ ] Test github hosting
 * [ ] Project detail
 * [ ] Animations
 

@@ -9,7 +9,7 @@ const Card = ({ project }) => {
     const { title, description, techStack, imageUrl, deployment, type } = project || {};
     // console.log(project)
     return (
-        <div className='w-fit sm:w-[48%] bg-white shadow-neumorphic p-2 rounded-lg flex flex-col justify-between gap-5 cursor-pointer'>
+        <div className='w-fit sm:w-[48%] bg-white/70 backdrop-blur-sm shadow-neumorphic p-2 rounded-lg flex flex-col justify-between gap-5 cursor-pointer'>
             <div>
                 <div className='w-full flex justify-between'>
                     <div>

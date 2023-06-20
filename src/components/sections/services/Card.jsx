@@ -4,7 +4,7 @@ import React from 'react';
 const Card = ({ service, type }) => {
     const { title, description, imageUrl } = service
     return (
-        <div className='w-[90%] sm:w-[48%] bg-white shadow-neumorphic p-2 rounded-lg flex flex-col justify-between gap-5'>
+        <div className='w-[90%] sm:w-[48%] bg-white/70 backdrop-blur-sm shadow-neumorphic p-2 rounded-lg flex flex-col justify-between gap-5'>
             <div>
 
 

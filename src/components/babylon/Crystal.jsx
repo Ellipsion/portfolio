@@ -67,19 +67,6 @@ const onSceneReady = (scene) => {
     mesh = SPS.buildMesh();
     mesh.material = pbr
     camera.target = sphere
-
-    // sphere.dispose()
-
-    // Our built-in 'ground' shape.
-    // MeshBuilder.CreateGround("ground", { width: 6, height: 6 }, scene);
-
-
-
-    // camera.setTarget(SPS.mesh)
-    // camera.attachControl()
-    // scene.createDefaultCamera(true, )
-    // scene.createDefaultCamera()
-    // camera.inputs.removeByType("DefaultCameraMouseInput");
 };
 
 /**
@@ -90,15 +77,9 @@ const onRender = (scene) => {
         const deltaTimeInMillis = scene.getEngine().getDeltaTime();
 
         const rpm = 5;
-
-
         mesh.rotation.y += (rpm / 60) * Math.PI * 2 * (deltaTimeInMillis / 1000);
-        // mesh.position.y += Math.sin(a)
         mesh.position.y = Math.sin((k - Date.now()) / 500) * 10;
         k += 0.09;
-
-
-
     }
 };
 
