@@ -18,7 +18,7 @@ const onSceneReady = (scene) => {
 
     // camera
     const camera = new ArcRotateCamera("cam1", 1, 1, -100, new Vector3(0, 0, -500), scene)
-    camera.attachControl()
+    camera.attachControl(canvas)
     camera.inputs.remove(camera.inputs.attached.mousewheel)
 
 
@@ -84,7 +84,7 @@ const onRender = (scene) => {
 };
 
 export default () => (
-    <div className={"fixed flex h-screen w-screen md:w-auto right-0 top-0 md:right-[10rem] justify-center items-center -z-10"}>
+    <div className={"fixed flex h-screen w-screen md:w-auto right-0 top-0 md:right-[10rem] justify-center items-center -z-10 xl:z-0"}>
         <SceneComponent className="w-[300px] h-[500px] outline-none" antialias onSceneReady={onSceneReady} onRender={onRender} id="my-canvas" />
     </div>
 );
