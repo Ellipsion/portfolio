@@ -1,8 +1,5 @@
 import React from 'react';
 import Card from './ProjectCard';
-import WidgetButton from 'components/buttons/WidgetButton';
-
-import { FaCode } from "react-icons/fa";
 
 import projectsData from "cms/projects.json";
 const ProjectsSection = () => {
