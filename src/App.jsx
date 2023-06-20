@@ -10,6 +10,7 @@ import Projects from "./pages/Projects"
 import Resume from "pages/Resume";
 import Contact from "pages/Contact";
 import ProjectDetail from "pages/ProjectDetail";
+import Crystal from "components/babylon/Crystal";
 
 const router = createBrowserRouter([{
   path: "/",
@@ -39,6 +40,7 @@ const router = createBrowserRouter([{
       path: "contact",
       element: <Contact />,
     },
+
 
   ]
 }])
