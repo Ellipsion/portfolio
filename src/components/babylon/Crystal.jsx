@@ -38,7 +38,7 @@ const onSceneReady = (scene) => {
 
     // Enable bloom effect
     var bloom = new GlowLayer("bloom", scene);
-    bloom.intensity = 2; // Increase the intensity of the bloom effect
+    bloom.intensity = 5; // Increase the intensity of the bloom effect
 
 
 

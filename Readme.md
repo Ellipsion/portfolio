@@ -15,6 +15,8 @@
 * [X] Add blur support for elements on mobile
 * [X] Test github hosting (figured out vercel file transfer is slow)
 * [ ] Project detail
+* [ ] Add button links and configure contact buttons
+* [ ] configure contact form
 * [ ] Animations
 
 ### Project Detail Page

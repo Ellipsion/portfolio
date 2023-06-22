@@ -8,9 +8,9 @@ import { IoMailOutline } from "react-icons/io5"
 const ContactActions = () => {
     return (
         <div className='flex flex-col gap-4 sm:px-0 sm:justify-start sm:flex-row w-full my-3'>
-            <SpringButton text={"Email"} Icon={IoMailOutline} link={"email:email"} />
-            <SpringButton text={"Github"} Icon={AiFillGithub} link={"email:email"} />
-            <SpringButton text={"LinkedIn"} Icon={FaLinkedinIn} link={"email:email"} />
+            <SpringButton text={"Email"} Icon={IoMailOutline} link={"mailto:ashishskyblue@gmail.com"} />
+            <SpringButton text={"Github"} Icon={AiFillGithub} link={"https://www.github.com/ellipsion"} />
+            <SpringButton text={"LinkedIn"} Icon={FaLinkedinIn} link={"https://www.linkedin.com/in/ashish-k-aa3168120/"} />
         </div>
     );
 }
