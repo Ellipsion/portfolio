@@ -25,7 +25,7 @@ const onSceneReady = (scene) => {
     // Default intensity is 1. Let's dim the light a small amount
 
 
-    var hdrTexture = new HDRCubeTexture("/textures/texture.hdr", scene, 512); // HDR texture
+    var hdrTexture = new HDRCubeTexture("/textures/texture2.hdr", scene, 512); // HDR texture
     var pbr = new PBRMaterial("pbr1", scene); // pbr material
     pbr.reflectionTexture = hdrTexture
     pbr.metallic = 0.0;

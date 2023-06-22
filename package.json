@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "ellipsion.github.io/portfolio",
+  "homepage": "/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b prod -d dist",

@@ -12,8 +12,8 @@
 
 * [X] Projects page
 * [X] Add message to project live link
-* [ ] Add blur support for elements on mobile
-* [ ] Test github hosting
+* [X] Add blur support for elements on mobile
+* [X] Test github hosting (figured out vercel file transfer is slow)
 * [ ] Project detail
 * [ ] Animations
 
