@@ -21,7 +21,7 @@ const Resume = () => {
                 <p className='text-normal font-medium'>My Resume</p>
                 {/* <p className='text-gray-500  text-sm z-10'>with a solid background in Python programming and web development.</p> */}
                 <a href={resumePDF} download={"Ashish's Resume"}>
-                    <button className='bg-white w-[50px] cursor-pointer p-4 flex items-center justify-center rounded-full font-normal text-lg shadow-neumorphic'>
+                    <button className='bg-white w-[50px] cursor-pointer p-4 flex items-center justify-center rounded-full font-normal text-lg shadow-neumorphic z-20'>
                         <LuDownload />
                     </button>
 

@@ -19,7 +19,7 @@ const ServicesSection = () => {
 
             </div>
 
-            <div className='mt-5 flex flex-wrap gap-3 justify-center sm:justify-normal'>
+            <div className='mt-5 md:mx-3 flex flex-wrap gap-3 justify-center sm:justify-normal'>
                 {servicesData.services.map((service, idx) => <Card key={`services-${idx}`} service={service} type="service" />)}
             </div>
         </div>
