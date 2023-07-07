@@ -13,12 +13,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.16",
     "@babylonjs/core": "^6.8.0",
     "babylonjs-hook": "^0.1.1",
     "framer-motion": "^10.12.17",
+    "graphql": "^16.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
+    "react-markdown": "^8.0.7",
     "react-pdf": "^7.1.2",
     "react-router-dom": "^6.12.0"
   },

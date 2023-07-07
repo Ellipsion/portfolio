@@ -129,6 +129,11 @@ const content = {
         icon: <BiCodeCurly />,
         iconStyle: "text-sky-600",
     },
+    "bootstrap": {
+        name: "Bootstrap",
+        icon: <FaBootstrap />,
+        iconStyle: "text-purple-600 bg-gray-100",
+    },
     "pandas": {
         name: "Pandas",
         icon: <SiPandas />,

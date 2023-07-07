@@ -26,11 +26,17 @@ const router = createBrowserRouter([{
     },
     {
       path: "projects",
-      element: <Projects />,
-    },
-    {
-      path: "project/:slug",
-      element: <ProjectDetail />
+
+      children: [
+        {
+          index: true,
+          element: <Projects />,
+        },
+        {
+          path: ":slug",
+          element: <ProjectDetail />
+        },
+      ]
     },
     {
       path: "resume",

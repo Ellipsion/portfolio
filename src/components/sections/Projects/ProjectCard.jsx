@@ -30,7 +30,7 @@ const Card = ({ project }) => {
                     <p className='text-sm font-medium my-1'>{title}</p>
                     <p className='text-[12px] text-stone-500'>{description}</p>
                 </div>
-                <div className='flex gap-2 mt-3 mx-2'>
+                <div className='flex flex-wrap gap-2 mt-3 mx-2'>
                     {
                         techStack?.map((skill, idx) => <SkillIcon key={`skill-${idx}-${idx + 1}`} skillName={skill} />)
                     }
