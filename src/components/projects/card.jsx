@@ -1,18 +1,42 @@
-import SkillIcon from 'components/SkillIcon';
 import React from 'react';
-
+import { motion } from "framer-motion"
+import { NavLink } from 'react-router-dom';
 import { loadMedia } from 'utils/mediaUtils';
+
+import SkillIcon from 'components/SkillIcon';
 
 //icons
 import { FiArrowDownRight } from "react-icons/fi"
-import { NavLink } from 'react-router-dom';
+
+
+const cardMotion = {
+    rest: {
+        transition: { duration: 1 }
+    },
+    hover: {
+        y: -6
+    }
+}
+
+const arrowMotion = {
+    rest: { opacity: 0, transition: { duration: 0.3 } },
+    hover: { opacity: 1, rotate: "-90deg" }
+}
 
 const Card = ({ project }) => {
     const { title, shortDesc, image, technologies, deployment, slug } = project.attributes
     console.log(project)
     return (
-        <div className='w-fit sm:w-[48%] bg-white/70 backdrop-blur-sm shadow-neumorphic hover:bg-gray-50/70 p-2 rounded-lg flex flex-col justify-between gap-5 '>
+
+        <motion.div
+            initial="rest"
+            whileHover="hover"
+            animate="rest"
+            variants={cardMotion}
+            // animate={{ transition: { duration: 1000 } }}
+            className='w-fit sm:w-[48%] bg-white/70 backdrop-blur-sm shadow-neumorphic hover:bg-gray-50/70 p-2 rounded-lg flex flex-col justify-between gap-5 '>
             <div>
+
                 <div className='w-full flex justify-between'>
                     <div>
                         <p className='text-[10px] font-bold border w-fit px-3 py-[7px] rounded-lg cursor-pointer capitalize'>Project</p>
@@ -21,7 +45,11 @@ const Card = ({ project }) => {
                         deployment?.data?.attributes.status && (
                             <a className=' cursor-pointer' href={deployment?.data?.attributes.link} target='_blank'>
                                 {/* <Tooltip name={deployment?.message} position={"bottom-10 left-0"}> */}
-                                <FiArrowDownRight className='text-xl m-2 font-bold' />
+                                <motion.div
+                                    variants={arrowMotion}
+                                >
+                                    <FiArrowDownRight className='text-xl m-2 font-bold' />
+                                </motion.div>
                                 {/* </Tooltip> */}
                             </a>
                         )
@@ -42,7 +70,8 @@ const Card = ({ project }) => {
             </div>
 
             <img className='w-full min-h-[100px] object-cover rounded-lg outline-none border-none' src={loadMedia(image.data.attributes.url)} alt="" />
-        </div>
+        </motion.div>
+
     );
 }
 

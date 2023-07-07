@@ -1,8 +1,7 @@
 import React from 'react';
 import Divider from '../components/ui/Divider';
-import Card from '../components/ui/Card';
+
 // import SkillCard from '../components/ui/SkillCard';
-import { PythonCard, JsCard, ReactCard, Django, Node, Mongo, Express, Postgres } from "../components/skillCards"
 import ResumeSection from 'components/sections/Resume';
 import WidgetButton from 'components/buttons/WidgetButton';
 import { LuDownload } from 'react-icons/lu';
@@ -24,7 +23,6 @@ const Resume = () => {
                     <button className='bg-white w-[50px] cursor-pointer p-4 flex items-center justify-center rounded-full font-normal text-lg shadow-neumorphic z-20'>
                         <LuDownload />
                     </button>
-
                 </a>
             </div>
             <div className=''>

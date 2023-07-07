@@ -54,28 +54,39 @@ const Projects = () => {
     }
   }, [data])
 
-  if (loading) return <>loading...</>
-  if (error) return <>error.</>
   return (
     <div className='mx-3 h-fit flex flex-wrap flex-col gap-8 sm:gap-5'>
       <div className='font-bold text-[40px] sm:text-[55px] leading-tight sm:leading-[68px] tracking-[-3px] sm:tracking-[-4px]'>
         <p >Projects </p>
       </div>
       <Divider />
-      <div className='px-3 sm:px-0'>
-        <p className='text-normal font-medium'>All Projects</p>
-        {/* <p className='text-gray-500  text-sm z-10'>with a solid background in Python programming and web development.</p> */}
-      </div>
-      <div className='px-3 sm:px-0'>
-        <div className='flex flex-col gap-5 '>
+      {
+        loading
+          ?
+          "loading..."
+          :
+          error
+            ?
+            "error loading resources."
+            :
+            <>
+              <div className='px-3 sm:px-0'>
+                <p className='text-normal font-medium'>All Projects</p>
+                {/* <p className='text-gray-500  text-sm z-10'>with a solid background in Python programming and web development.</p> */}
+              </div>
+              <div className='px-3 sm:px-0'>
+                <div className='flex flex-col gap-5 '>
 
-          <div className='mt-5 flex flex-wrap gap-3 justify-center sm:justify-normal'>
-            {
-              data.projects.data.map(project => <Card key={project.id} project={project} />)
-            }
-          </div>
-        </div>
-      </div>
+                  <div className='mt-5 flex flex-wrap gap-3 justify-center sm:justify-normal'>
+                    {
+                      data.projects.data.map(project => <Card key={project.id} project={project} />)
+                    }
+                  </div>
+                </div>
+              </div>
+            </>
+      }
+
       <Divider />
     </div>
   );

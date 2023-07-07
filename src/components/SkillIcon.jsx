@@ -1,7 +1,8 @@
 import React from 'react';
-import { Fa500Px } from 'react-icons/fa';
+import Tooltip from './tooltip';
 
 // icons 
+import { Fa500Px } from 'react-icons/fa';
 import { SiPostgresql } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
 import {
@@ -168,7 +169,11 @@ const SkillIcons = ({ skillName }) => {
     return (
         <div>
             {
-                icon && (<p className={`text-2xl font-light flex gap-1 cursor-pointer w-fit px-2 py-1 rounded-lg  ${icon.iconStyle}`}>{icon.icon}</p>)
+                icon && (
+
+                    <p className={`text-2xl font-light flex gap-1 cursor-pointer w-fit px-2 py-1 rounded-lg  ${icon.iconStyle}`}>{icon.icon}</p>
+
+                )
             }
 
         </div>
