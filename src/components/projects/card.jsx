@@ -24,7 +24,7 @@ const arrowMotion = {
 }
 
 const Card = ({ project }) => {
-    const { title, shortDesc, image, technologies, deployment, slug } = project.attributes
+    const { title, shortDesc, image, technologies, deployment, slug, isExplained } = project.attributes
     console.log(project)
     return (
 
@@ -56,12 +56,23 @@ const Card = ({ project }) => {
                     }
 
                 </div>
-                {/* <NavLink to={`/projects/${slug}`}> */}
-                <div className='w-full p-2 cursor-pointer'>
-                    <p className='text-sm font-medium my-1'>{title}</p>
-                    <p className='text-[12px] text-stone-500'>{shortDesc}</p>
-                </div>
-                {/* </NavLink> */}
+                {
+                    isExplained
+                        ?
+                        <NavLink to={`/projects/${slug}`} >
+                            <div className='w-full p-2 cursor-pointer'>
+                                <p className='text-sm font-medium my-1'>{title}</p>
+                                <p className='text-[12px] text-stone-500'>{shortDesc}</p>
+                            </div>
+                        </NavLink>
+                        :
+                        <div className='w-full p-2 cursor-pointer'>
+                            <p className='text-sm font-medium my-1'>{title}</p>
+                            <p className='text-[12px] text-stone-500'>{shortDesc}</p>
+                        </div>
+                }
+
+
                 <div className='flex flex-wrap gap-2 mt-3 mx-2'>
                     {
                         technologies.data.map((skill, idx) => <SkillIcon key={`skill-${skill.id}`} skillName={skill.attributes.name} />)
@@ -69,7 +80,7 @@ const Card = ({ project }) => {
                 </div>
             </div>
 
-            <img className='w-full min-h-[100px] object-cover rounded-lg outline-none border-none' src={loadMedia(image.data.attributes.url)} alt="" />
+            <img className='w-full min-h-[100px] object-cover rounded-lg outline-none border-none' src={image.data.attributes.url} alt="" />
         </motion.div>
 
     );

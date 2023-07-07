@@ -34,7 +34,7 @@ const Home = () => {
             </div>
             {/* action buttons */}
             <ContactActions />
-            <div className='px-3 sm:px-0'>
+            <div className='px-3'>
                 <p className='text-gray-500  text-md'>
                     {homeData.introduction}
                 </p>

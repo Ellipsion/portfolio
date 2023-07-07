@@ -1,3 +1,4 @@
+import { createContext, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // layout
@@ -51,10 +52,14 @@ const router = createBrowserRouter([{
   ]
 }])
 
-function App() {
+export const LoadingContext = createContext()
 
+function App() {
+  const [loading, setLoading] = useState(true)
   return (
-    <RouterProvider router={router} />
+    <LoadingContext.Provider value={{ loading, setLoading }}>
+      <RouterProvider router={router} />
+    </LoadingContext.Provider>
 
   )
 }

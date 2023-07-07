@@ -3,7 +3,7 @@ import { Document, Page } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
-import resumePDF from 'cms/Resume.pdf';
+import resumePDF from '/resume.pdf';
 import { useNavigate } from 'react-router-dom';
 const ResumeSection = () => {
 

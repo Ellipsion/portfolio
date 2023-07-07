@@ -1,13 +1,13 @@
-import React from "react";
-import { Vector3, Color3, Texture, GlowLayer, HemisphericLight, MeshBuilder, SolidParticleSystem, ArcRotateCamera, PBRMaterial, HDRCubeTexture, StandardMaterial } from "@babylonjs/core";
-// import SceneComponent from "./SceneComponent"; // uses above component in same directory
+import React, { useContext } from "react";
+import { LoadingContext } from "~/App";
+import { Vector3, Color3, Color4, Texture, GlowLayer, HemisphericLight, MeshBuilder, SolidParticleSystem, ArcRotateCamera, PBRMaterial, HDRCubeTexture, StandardMaterial } from "@babylonjs/core";
 import SceneComponent from 'babylonjs-hook'; // if you install 'babylonjs-hook' NPM.
 
 
 let mesh;
 var k = Date.now()
 const onSceneReady = (scene) => {
-    scene.clearColor = Color3.White();
+    scene.clearColor = new Color4(0, 0, 0, 0);
     // This creates and positions a free camera (non-mesh)
 
     const canvas = scene.getEngine().getRenderingCanvas();
@@ -25,7 +25,7 @@ const onSceneReady = (scene) => {
     // Default intensity is 1. Let's dim the light a small amount
 
 
-    var hdrTexture = new HDRCubeTexture("/textures/texture2.hdr", scene, 512); // HDR texture
+    var hdrTexture = new HDRCubeTexture("https://res.cloudinary.com/dz4qkxfpd/raw/upload/v1688754410/texture2_5f38e809e8.hdr", scene, 512,); // HDR texture
     var pbr = new PBRMaterial("pbr1", scene); // pbr material
     pbr.reflectionTexture = hdrTexture
     pbr.metallic = 0.0;
@@ -67,6 +67,7 @@ const onSceneReady = (scene) => {
     mesh = SPS.buildMesh();
     mesh.material = pbr
     camera.target = sphere
+    console.log("scene loaded")
 };
 
 /**

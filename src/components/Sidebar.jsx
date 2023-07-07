@@ -1,8 +1,26 @@
 import React from 'react';
+import { motion, easeIn } from "framer-motion"
+
 import MenuButton from './buttons/MenuButton';
+
+
 import { SiNounproject } from "react-icons/si";
 import { CiMail, CiGrid42, CiViewTimeline, CiPaperplane } from "react-icons/ci"
-import { LuCode2 } from "react-icons/lu"
+import { LuCode2 } from "react-icons/lu";
+
+const sidebarMotion = {
+    initial: {
+        y: 100,
+    },
+    animate: {
+        y: 0,
+        transition: {
+            ease: easeIn,
+            type: "tween",
+            duration: 0.2,
+        }
+    }
+}
 
 const Sidebar = () => {
 

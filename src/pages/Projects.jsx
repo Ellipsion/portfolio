@@ -14,6 +14,7 @@ query getProjects {
           title,
           shortDesc,
           slug,
+          isExplained,
           image {
             data {
               attributes {
@@ -52,7 +53,10 @@ const Projects = () => {
     if (data) {
       console.log(data)
     }
-  }, [data])
+    if (error) {
+      console.log(error)
+    }
+  }, [data, error])
 
   return (
     <div className='mx-3 h-fit flex flex-wrap flex-col gap-8 sm:gap-5'>
