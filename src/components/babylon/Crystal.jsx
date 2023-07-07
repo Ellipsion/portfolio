@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
-import { LoadingContext } from "~/App";
-import { Vector3, Color3, Color4, Texture, GlowLayer, HemisphericLight, MeshBuilder, SolidParticleSystem, ArcRotateCamera, PBRMaterial, HDRCubeTexture, StandardMaterial } from "@babylonjs/core";
+import React, { useContext, useEffect, useState } from "react";
+import { Vector3, Color3, Color4, Texture, ScenePerformancePriority, GlowLayer, HemisphericLight, MeshBuilder, SolidParticleSystem, ArcRotateCamera, PBRMaterial, HDRCubeTexture, StandardMaterial } from "@babylonjs/core";
 import SceneComponent from 'babylonjs-hook'; // if you install 'babylonjs-hook' NPM.
 
 
@@ -9,6 +8,8 @@ var k = Date.now()
 const onSceneReady = (scene) => {
     scene.clearColor = new Color4(0, 0, 0, 0);
     // This creates and positions a free camera (non-mesh)
+
+    scene.performancePriority = ScenePerformancePriority.BackwardCompatible;
 
     const canvas = scene.getEngine().getRenderingCanvas();
 
@@ -84,8 +85,14 @@ const onRender = (scene) => {
     }
 };
 
-export default () => (
-    <div className={"fixed flex h-screen w-screen md:w-auto right-0 top-0 md:right-[10rem] justify-center items-center -z-10 xl:z-0"}>
-        <SceneComponent className="w-[300px] h-[500px] outline-none" antialias onSceneReady={onSceneReady} onRender={onRender} id="my-canvas" />
-    </div>
-);
+export default () => {
+    const [hidden, setHidden] = useState(true)
+    useEffect(() => {
+        setTimeout(() => setHidden(false), 2000)
+    }, [hidden])
+    return (
+        <div className={"fixed flex h-screen w-screen md:w-auto right-0 top-0 md:right-[10rem] justify-center items-center -z-10 xl:z-0"}>
+            <SceneComponent className={`w-[300px] h-[500px] outline-none ${hidden ? "hidden" : ""} `} antialias onSceneReady={onSceneReady} onRender={onRender} id="my-canvas" />
+        </div>
+    )
+};
