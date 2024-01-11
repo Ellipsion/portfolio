@@ -29,6 +29,7 @@ import { LuWebhook, LuSoup } from "react-icons/lu";
 import { ImHtmlFive } from "react-icons/im";
 import { BiCodeCurly } from "react-icons/bi";
 import { GrDocumentStore } from "react-icons/gr";
+import { TbJson } from "react-icons/tb";
 
 const content = {
     "javascript": {
@@ -155,6 +156,11 @@ const content = {
         icon: <SiSelenium />,
         iconStyle: "text-green-600",
     },
+    "json": {
+        name: "Json",
+        icon: <TbJson />,
+        iconStyle: "text-fuscia-500",
+    },
 };
 
 const preset = {
@@ -170,12 +176,9 @@ const SkillIcons = ({ skillName }) => {
         <div>
             {
                 icon && (
-
                     <p className={`text-2xl font-light flex gap-1 cursor-pointer w-fit px-2 py-1 rounded-lg  ${icon.iconStyle}`}>{icon.icon}</p>
-
                 )
             }
-
         </div>
     );
 }

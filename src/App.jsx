@@ -8,6 +8,7 @@ import IndexLayout from "./layouts/IndexLayout"
 import Home from "./pages/Home"
 import Skills from "./pages/Skills"
 import Projects from "./pages/Projects"
+import ProjectsOld from "./pages/Projects-old"
 import Resume from "pages/Resume";
 import Contact from "pages/Contact";
 import ProjectDetail from "pages/ProjectDetail";
@@ -31,7 +32,7 @@ const router = createBrowserRouter([{
       children: [
         {
           index: true,
-          element: <Projects />,
+          element: <ProjectsOld />,
         },
         {
           path: ":slug",
@@ -47,8 +48,6 @@ const router = createBrowserRouter([{
       path: "contact",
       element: <Contact />,
     },
-
-
   ]
 }])
 

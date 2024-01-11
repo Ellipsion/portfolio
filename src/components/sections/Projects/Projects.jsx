@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './ProjectCard';
 
 import projectsData from "cms/projects.json";
+
 const ProjectsSection = () => {
     return (
         <div className='flex flex-col gap-5 '>

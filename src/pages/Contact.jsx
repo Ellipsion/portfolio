@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Divider from 'components/ui/Divider';
 import ContactActions from 'components/ContactActions';
 
-import { BsDot } from "react-icons/bs"
+import { BsDot } from "react-icons/bs";
 
 function Contact() {
     return (

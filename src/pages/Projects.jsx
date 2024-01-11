@@ -49,14 +49,7 @@ query getProjects {
 
 const Projects = () => {
   const { data, loading, error } = useQuery(GET_PROJECTS)
-  useEffect(() => {
-    if (data) {
-      console.log(data)
-    }
-    if (error) {
-      console.log(error)
-    }
-  }, [data, error])
+
 
   return (
     <div className='mx-3 h-fit flex flex-wrap flex-col gap-8 sm:gap-5'>
